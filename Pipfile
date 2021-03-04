@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.1.7"
+requests = "==2.25.1"
+aiohttp = "==3.7.4"
+meli = {ref = "master", git = "https://github.com/mercadolibre/python-sdk.git"}
+python-decouple = "==3.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

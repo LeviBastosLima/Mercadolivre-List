@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    {% for key, value in response.items %}
+        <input type="hidden" value="{{ value }}" name="{{ key }}">
+    {% endfor %}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(':input').each(function () {
+            localStorage.setItem($(this).attr('name'), $(this).val())
+        })
+        const expire_date = (new Date().getTime() / 1000) + parseInt(localStorage.getItem('expires_in'))
+        localStorage.setItem('expire_date', expire_date)
+        $.ajax({
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+            },
+            type: 'GET',
+            dataType: 'json',
+            url: 'https://api.mercadolibre.com/users/me',
+            success: function(data){
+                localStorage.setItem('name', `${data.first_name} ${data.last_name}`)
+            }
+        })
+        window.location.replace(window.location.origin + '/sales/users-publications/')
+    })
+</script>
+</html>
