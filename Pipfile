@@ -9,6 +9,8 @@ requests = "==2.25.1"
 aiohttp = "==3.7.4"
 meli = {ref = "master", git = "https://github.com/mercadolibre/python-sdk.git"}
 python-decouple = "==3.4"
+django-heroku = "==0.3.1"
+gunicorn = "==20.0.4"
 
 [dev-packages]
 
