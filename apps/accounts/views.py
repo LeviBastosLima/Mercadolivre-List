@@ -19,6 +19,8 @@ def oauth_redirect(request) -> HttpResponse:
     """GET oauth/redirect/
     """
     code = request.GET.get('code')
+    print('request', request)
+    print('code', code)
     oauth = Oauth()
     user_data = oauth.get_token(code)
     print(user_data)
