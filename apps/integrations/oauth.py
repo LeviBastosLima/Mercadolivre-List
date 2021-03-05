@@ -30,6 +30,7 @@ class Oauth:
     def get_token(self, code: str) -> Dict[str, Union[str, int]]:
         """Get the access_token of free_market
         """
+        print(code)
         with meli.ApiClient() as api_client:
             api_instance = meli.OAuth20Api(api_client)
             grant_type = 'authorization_code'

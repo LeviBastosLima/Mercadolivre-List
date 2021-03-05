@@ -11,6 +11,7 @@ def oauth_free_market(request) -> Union[HttpResponsePermanentRedirect, HttpRespo
     """
     oauth = Oauth()
     response = oauth.get_free_market_authorization()
+    print(response)
     return response
 
 
