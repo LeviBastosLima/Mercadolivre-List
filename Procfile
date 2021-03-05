@@ -1,1 +1,1 @@
-web: gunicorn vough_backend.wsgi
+web: gunicorn realtrends_test.wsgi
