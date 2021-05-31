@@ -1,4 +1,4 @@
-# RealTrends-Test
+# Mercadolivre-List
 
 Project for the test of real trends, which integrates the free market, returning the ten biggest sellers and the ten most expensive sales, together with OAuth.
 
