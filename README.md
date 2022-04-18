@@ -15,8 +15,8 @@ Follow the link with the project on heroku: https://realtrends-test.herokuapp.co
 Example:
 
 ```
-APP_ID=3092289227935085
-SECRET_KEY=xWceHEsZwhEJr48i7IEgXKnD9mAZ03GA
+APP_ID=
+SECRET_KEY=
 FREE_MARKET_API_URL = https://api.mercadolibre.com/
 FREE_MARKET_AUTH_URL = http://auth.mercadolibre.com.ar/
 SECRET_KEY_DJANGO=@vr^&ew$i0p6r*nup76su(r8bo%0^$ug^86&lqk@#r@a!ee8t3
